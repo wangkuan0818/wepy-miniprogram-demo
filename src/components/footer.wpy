@@ -1,0 +1,50 @@
+<style lang="less">
+.footer{
+  height: 90rpx;
+  width: 100%;
+  line-height: 90rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  ul{
+    width: 100%;
+    height: 100%;
+    display: block;
+    li{
+      float: left;
+      width: 50%;
+      text-align: center;
+      font-size: 26rpx;
+    }
+  }
+}
+</style>
+<template>
+  <view class="footer">
+    <ul>
+      <navigator url="/pages/index" open-type="redirect">
+        <li>
+          <dl class="">
+            <dd></dd>
+            <dt>后台管理</dt>
+          </dl>
+        </li>
+      </navigator>
+      <navigator url="/pages/demo" open-type="redirect">
+        <li>
+          <dl class="">
+            <dd></dd>
+            <dt>我的</dt>
+          </dl>
+        </li>
+      </navigator>
+    </ul>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+
+  export default class Footer extends wepy.component {
+  }
+</script>

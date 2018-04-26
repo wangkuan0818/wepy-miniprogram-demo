@@ -1,0 +1,44 @@
+<style lang="less">
+  
+</style>
+
+<template>
+  <view class="container">
+    <navigator url="/pages/demo" open-type="redirect">切换 Tab</navigator>
+    <footer></footer>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Footer from '../components/footer'
+
+  export default class Index extends wepy.page {
+    config = {
+
+    }
+    components = {
+      footer: Footer,
+    }
+
+    data = {
+      message: 'Hello MINA!'
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+
+    }
+  }
+</script>

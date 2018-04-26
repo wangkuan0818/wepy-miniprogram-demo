@@ -1,0 +1,15 @@
+{
+	"description": "niusee-miniprogram",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx17c61e7e880d4cef",
+	"projectname": "niusee-miniprogram",
+	"miniprogramRoot": "./dist",
+	"condition": {}
+}
