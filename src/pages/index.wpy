@@ -1,28 +1,135 @@
 <style lang="less">
-  
+.contentItems{
+  margin-top: 20rpx;
+  background-color: #fff;
+  height: 112rpx;
+  padding: 20rpx 20rpx;
+  position: relative;
+  .contentImg{
+    position: absolute;
+    left: 20rpx;
+    top: 20rpx;
+    height: 108rpx;
+    width: 184rpx;
+    background-color: #f00;
+    image{
+      height: 108rpx;
+      width: 184rpx;
+    }
+  }
+  .contentMain{
+    padding-left: 204rpx;
+    height: 100%;
+    .title{
+      height: 72rpx;
+      line-height: 36rpx;
+      font-size: 28rpx;
+      word-wrap:break-word;
+      word-break:break-all;
+      overflow: hidden;
+      color: #101010;
+    }
+    .title2{
+      position: relative;
+      font-size: 24rpx;
+      height: 34rpx;
+      line-height: 34rpx;
+      color: #bdbdbd;
+      .moreBnt{
+        position: absolute;
+        right: 0rpx;
+        bottom: -5rpx;
+        text-align: center;
+        line-height: 48rpx;
+        height: 48rpx;
+        width: 48rpx;
+      }
+    }
+  }
+}
 </style>
 
 <template>
   <view class="container">
-    <navigator url="/pages/demo" open-type="redirect">切换 Tab</navigator>
-    <footer></footer>
+    <nav @childFn.user="isShowList"></nav>
+    <view class="contentList" wx:if="{{isList}}">
+      <view class="contentItems">
+        <view class="contentImg">
+          <image>
+        </view>
+        <view class="contentMain">
+          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <view class="title2">123123123123
+            <view class="moreBnt">...</view>
+          </view>
+        </view>
+      </view>
+      <view class="contentItems">
+        <view class="contentImg">
+          <image>
+        </view>
+        <view class="contentMain">
+          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <view class="title2">123123123123
+            <view class="moreBnt">...</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="contentList" wx:else>
+      <view class="contentItems">
+        <view class="contentImg">
+          <image>
+        </view>
+        <view class="contentMain">
+          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <view class="title2">123123123123
+            <view class="moreBnt">...</view>
+          </view>
+        </view>
+      </view>
+      <view class="contentItems">
+        <view class="contentImg">
+          <image>
+        </view>
+        <view class="contentMain">
+          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <view class="title2">123123123123
+            <view class="moreBnt">...</view>
+          </view>
+        </view>
+      </view>
+      <view class="contentItems">
+        <view class="contentImg">
+          <image>
+        </view>
+        <view class="contentMain">
+          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <view class="title2">123123123123
+            <view class="moreBnt">...</view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
 
 <script>
   import wepy from 'wepy'
   import Footer from '../components/footer'
+  import Nav from '../components/nav'
 
   export default class Index extends wepy.page {
     config = {
 
     }
     components = {
-      footer: Footer,
+      nav: Nav,
     }
 
     data = {
-      message: 'Hello MINA!'
+      message: 'Hello MINA!',
+      isList: true,
     }
 
     computed = {
@@ -30,7 +137,13 @@
     }
 
     methods = {
-
+      isShowList (value, evt) {
+        if(value == 1){
+          this.isList = true
+        }else{
+          this.isList = false
+        }
+      }
     }
 
     events = {

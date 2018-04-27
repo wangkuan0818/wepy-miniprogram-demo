@@ -1,11 +1,13 @@
 <style lang="less">
+page{
+  background-color: #F7F7F7;
+}
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  padding-bottom:90rpx;
 }
 </style>
 
@@ -30,7 +32,19 @@ export default class extends wepy.app {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      "list": [{
+        "pagePath": "pages/index",
+        "text": "后台管理"
+      }, {
+        "pagePath": "pages/demo",
+        "text": "我的"
+      }],
+      "color": "#000000",
+      "selectedColor": "#E51C23",
+      "backgroundColor": "#fff",
+    },
   }
 
   globalData = {
