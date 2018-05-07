@@ -1,0 +1,164 @@
+<style lang="less">
+  .contentList{
+    background-color: #fff;
+    .lists{
+      position: relative;
+      margin: 0 20rpx;
+      padding-bottom: 136rpx;
+      dl.list{
+        position: relative;
+        display: block;
+        clear: both;
+        padding: 20rpx 0;
+        border-bottom: 2rpx solid #eee;
+        dt,dd{
+          font-size: 28rpx;
+          line-height: 36rpx;
+          float: left;
+        }
+        dt{
+          width: 140rpx;
+          text-align: left;
+          color: #101010;
+        }
+        dd{
+          width:570rpx;
+          color: #9E9E9E;
+          word-wrap:break-word;
+          word-break:break-all;
+          image{
+            width: 212rpx;
+            height: 124rpx;
+            vertical-align:bottom;
+            background-color: #FA969C;
+          }
+        }
+      }
+      dl.list:after {
+         content:" ";
+         display: block;
+         clear:both;
+      }
+    }
+  }
+  .footr_buttons{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 92rpx;
+    background-color: #F7F7F7;
+    padding-top: 44rpx;
+    padding-left: 192rpx;
+    z-index: 1000;
+  }
+  button.btns{
+    padding:0 0rpx;
+    width: 148rpx;
+    text-align: center;
+    margin:0;
+    display:initial;
+    float:left;
+    height:60rpx;
+    line-height:60rpx;
+    font-size:24rpx;
+    margin-right: 76rpx;
+    border: 2rpx solid #F7838A;
+    border-radius: 10rpx;
+    color: #F78F96;
+    background-color: #fff;
+  }
+  button.active{
+    color: #fff;
+    background-color: #FC9096;
+  }
+</style>
+
+<template>
+  <view class="container contentList">
+    <view class="lists">
+      <dl class="list clearfix">
+        <dt>内容标题</dt>
+        <dd>王新英语五年级下清华版第二单元王新英语五年级下清华版第二单元</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>发布栏目</dt>
+        <dd>精彩校园</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>类型</dt>
+        <dd>艺术节</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>视频</dt>
+        <dd>手机QQ视频_20180417160042</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>封面</dt>
+        <dd>
+          <image></image>
+        </dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>内容简介</dt>
+        <dd>王新英语五年级下清华版第二单元王新英语五年级下清华版第二单元</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>标签</dt>
+        <dd>其他</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>隐私</dt>
+        <dd>游客可见</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>创建者</dt>
+        <dd>李婷</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>创建时间</dt>
+        <dd>2018-04-10 08:00</dd>
+      </dl>
+      <dl class="list clearfix">
+        <dt>更新时间</dt>
+        <dd>2018-04-10 08:00</dd>
+      </dl>
+    </view>
+    <view class="footr_buttons">
+      <button class="btns active" hover-class="none">下架</button>
+      <button class="btns" hover-class="none">删除</button>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class ContentList extends wepy.page {
+    config = {
+
+    }
+    components = {
+    }
+
+    data = {
+
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+
+    }
+  }
+</script>

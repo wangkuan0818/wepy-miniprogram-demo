@@ -1,0 +1,134 @@
+<style lang="less">
+  page{
+    background-color: #fff;
+  }
+  .login_user_image{
+    margin: 80rpx auto;
+    image{
+      width: 114rpx;
+      height: 114rpx;
+      background-color: #FA969C;
+      border-radius: 50%;
+    }
+  }
+  .login_input{
+    padding: 0 40rpx;
+    .lists{
+      position: relative;
+      dl.list{
+        position: relative;
+        display: block;
+        clear: both;
+        padding: 20rpx 0;
+        border-bottom: 2rpx solid #eee;
+        dt,dd,dd input{
+          font-size: 28rpx;
+          height: 36rpx;
+          line-height: 36rpx;
+          float: left;
+        }
+        dt{
+          width: 140rpx;
+          text-align: left;
+          color: #101010;
+          line-height:46rpx;
+        }
+        dd{
+          color: #9E9E9E;
+          word-wrap:break-word;
+          word-break:break-all;
+        }
+      }
+      dl.list:after {
+         content:" ";
+         display: block;
+         clear:both;
+      }
+    }
+    button.login_btn{
+      height: 72rpx;
+      line-height: 72rpx;
+      color: #fff;
+      margin-top: 80rpx;
+      font-size: 28rpx;
+      background-color: #FC8B92;
+    }
+  }
+  .forget_password{
+    text-align: right;
+    padding: 0 40rpx;
+    font-size: 24rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+    margin-top: 10rpx;
+  }
+</style>
+
+<template>
+  <view class="container">
+    <view class="login_user_image">
+      <image></image>
+    </view>
+    <view class="login_input">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="lists">
+          <dl class="list clearfix">
+            <dt>账号</dt>
+            <dd>
+              <input name="username" placeholder="请输入账号" />
+            </dd>
+          </dl>
+          <dl class="list clearfix">
+            <dt>密码</dt>
+            <dd>
+              <input name="password" placeholder="请输入密码" />
+            </dd>
+          </dl>
+        </view>
+        <view class="btn-area">
+          <button class="login_btn" hover-class="none" formType="submit">登录</button>
+        </view>
+      </form>
+    </view>
+    <text class="forget_password" @tap="forgetPassword">忘记密码？</text>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class LoginIndex extends wepy.page {
+    config = {
+
+    }
+    components = {
+    }
+
+    data = {
+
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+      formSubmit: function (e) {
+        console.log('form发生了submit事件，携带数据为：', e.detail.value)
+        this.$switch('../index')
+      },
+      forgetPassword: function () {
+        console.log(1)
+        this.$navigate('./forgetPassword')
+      }
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+
+    }
+  }
+</script>

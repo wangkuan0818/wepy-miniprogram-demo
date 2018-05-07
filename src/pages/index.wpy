@@ -11,7 +11,7 @@
     top: 20rpx;
     height: 108rpx;
     width: 184rpx;
-    background-color: #f00;
+    background-color: #FA969C;
     image{
       height: 108rpx;
       width: 184rpx;
@@ -53,25 +53,14 @@
   <view class="container">
     <nav @childFn.user="isShowList"></nav>
     <view class="contentList" wx:if="{{isList}}">
-      <view class="contentItems">
+      <view class="contentItems" wx:for="{{contentlist}}" wx:key="contentlist">
         <view class="contentImg">
           <image>
         </view>
         <view class="contentMain">
-          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
-          <view class="title2">123123123123
-            <view class="moreBnt">...</view>
-          </view>
-        </view>
-      </view>
-      <view class="contentItems">
-        <view class="contentImg">
-          <image>
-        </view>
-        <view class="contentMain">
-          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
-          <view class="title2">123123123123
-            <view class="moreBnt">...</view>
+          <navigator url="/pages/index/contentList" ><view class="title">{{item.title}}</view></navigator>
+          <view class="title2">{{item.title2}}
+            <view class="moreBnt">. . .</view>
           </view>
         </view>
       </view>
@@ -82,7 +71,7 @@
           <image>
         </view>
         <view class="contentMain">
-          <view class="title">12312312312312312312312312312312312312312312312312312313123123</view>
+          <navigator url="/pages/index/contentListAudit" ><view class="title">12312312312312312312312312312312312312312312312312312313123123</view></navigator>
           <view class="title2">123123123123
             <view class="moreBnt">...</view>
           </view>
@@ -116,7 +105,6 @@
 
 <script>
   import wepy from 'wepy'
-  import Footer from '../components/footer'
   import Nav from '../components/nav'
 
   export default class Index extends wepy.page {
@@ -124,12 +112,21 @@
 
     }
     components = {
-      nav: Nav,
+      nav: Nav
     }
 
     data = {
       message: 'Hello MINA!',
       isList: true,
+      contentlist: [{
+        'title': '123123123123132123123123123123123123123123123123123123123',
+        'title2': '2018-4-28 15:09:42',
+        'id': 1
+      }, {
+        'title': '456456456456456',
+        'title2': '2018-4-28 15:09:42',
+        'id': 2
+      }]
     }
 
     computed = {
@@ -138,9 +135,10 @@
 
     methods = {
       isShowList (value, evt) {
-        if(value == 1){
+        console.log(value)
+        if (value === '1') {
           this.isList = true
-        }else{
+        } else {
           this.isList = false
         }
       }

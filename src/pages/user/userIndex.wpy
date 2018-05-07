@@ -1,0 +1,118 @@
+<style lang="less">
+  .user_main{
+    height: 152rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    padding-left: 164rpx;
+    padding-right: 144rpx;
+    position: relative;
+    .user_img{
+      position: absolute;
+      left: 24rpx;
+      top: 24rpx;
+      background-color: #FA969C;
+      width: 116rpx;
+      height: 116rpx;
+      border-radius: 50%;
+    }
+    .user_btns{
+      position: absolute;
+      right: 24rpx;
+      top: 48rpx;
+      width: 120rpx;
+      height: 56rpx;
+      line-height: 56rpx;
+      border: 2rpx solid #F77C92;
+      border-radius: 10rpx;
+      color: #F7777E;
+      background-color: #fff;
+      font-size: 24rpx;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+    .user_wechat_name{
+      font-size: 28rpx;
+      color: #101010;
+      display: block;
+      margin-top: 28rpx;
+      line-height: 46rpx;
+      height: 46rpx;
+    }
+    .user_niusee_name{
+      font-size: 24rpx;
+      color: #B0B0B0;
+      display: block;
+      margin-top: 12rpx;
+      line-height: 46rpx;
+      height: 46rpx;
+    }
+  }
+  .modify_password{
+    height: 100rpx;
+    line-height: 100rpx;
+    position: relative;
+    padding: 0 24rpx;
+    font-size: 28rpx;
+    color: #101010;
+    padding-right: 24rpx;
+    background-color: #fff;
+    .modify_password_icon{
+      position: absolute;
+      right: 24rpx;
+      top: 24rpx;
+      width:48rpx;
+      height:48rpx;
+      line-height:48rpx;
+      color: #B8B8B8;
+    }
+  }
+</style>
+
+<template>
+  <view class="container">
+    <view class="user_main">
+      <image class="user_img"></image>
+      <button class="user_btns" hover-class="none">解除绑定</button>
+      <text class="user_wechat_name">微信号</text>
+      <text class="user_niusee_name">已绑定账号：liting</text>
+    </view>
+    <navigator url="/pages/user/modifyPassword">
+      <view class="modify_password">
+        修改密码
+        <text class="modify_password_icon">></text>
+      </view>
+    </navigator>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class UserIndex extends wepy.page {
+    config = {
+
+    }
+    components = {
+    }
+
+    data = {
+    }
+
+    computed = {
+
+    }
+
+    methods = {
+
+    }
+
+    events = {
+
+    }
+
+    onLoad() {
+
+    }
+  }
+</script>

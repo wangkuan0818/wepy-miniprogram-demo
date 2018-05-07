@@ -24,8 +24,14 @@ setStore(store)
 export default class extends wepy.app {
   config = {
     pages: [
+      'pages/login/index',
+      'pages/login/forgetPassword',
       'pages/index',
-      'pages/demo',
+      'pages/index/contentList',
+      'pages/index/contentListAudit',
+      'pages/user/userIndex',
+      'pages/user/modifyPassword',
+      'pages/demo'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -34,17 +40,17 @@ export default class extends wepy.app {
       navigationBarTextStyle: 'black'
     },
     tabBar: {
-      "list": [{
-        "pagePath": "pages/index",
-        "text": "后台管理"
+      'list': [{
+        'pagePath': 'pages/index',
+        'text': '后台管理'
       }, {
-        "pagePath": "pages/demo",
-        "text": "我的"
+        'pagePath': 'pages/user/userIndex',
+        'text': '我的'
       }],
-      "color": "#000000",
-      "selectedColor": "#E51C23",
-      "backgroundColor": "#fff",
-    },
+      'color': '#000000',
+      'selectedColor': '#E51C23',
+      'backgroundColor': '#fff'
+    }
   }
 
   globalData = {

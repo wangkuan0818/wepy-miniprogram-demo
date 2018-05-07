@@ -48,22 +48,13 @@
 
   export default class Nav extends wepy.component {
     data = {
-      info: [
-        {
-          name:'全部内容',
-          value: 1
-        },{
-          name:'内容审核',
-          value: 2
-        }
-      ],
-      selected:true,
+      selected: true
     }
     methods = {
       tap (value) {
-        if(value == 1){
+        if (value === '1') {
           this.selected = true
-        }else{
+        } else {
           this.selected = false
         }
         this.$emit('childFn', value)
